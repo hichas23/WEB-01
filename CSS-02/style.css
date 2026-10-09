@@ -1,0 +1,83 @@
+.lista1 {
+    list-style-type: square;
+}
+
+.lista2 {
+    list-style-type: upper-roman;
+}
+
+.lista3 {
+    list-style-image: url("listacss1.png");
+
+}
+
+.tabela {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.tabela th,
+.tabela td {
+    border: 1px solid #244896;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabela tr:nth-child(even) {
+    background-color: #8d1818;
+}
+
+.link1 {
+    color: purple;
+    text-decoration: none;
+}
+
+.link2 {
+    color: red;
+    text-decoration: underline;
+}
+
+.link2:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.link2:visited {
+    color: blue;
+}
+
+.link2:active {
+    color: orange;
+
+}
+
+.ex1 {
+    display: inline;
+    background: yellow;
+}
+
+.ex2 {
+    display: block;
+    background: rgb(63, 14, 29);
+}
+
+.v1 {
+    visibility: visible;
+}
+
+.v2 {
+    visibility: hidden;
+}
+
+.v3 {
+    display: none;
+}
+.caixa1{
+    width:200px;
+    height:200px;
+}
+.caixa2{
+    font: size 1.5rem;
+    height:50vh;
+}

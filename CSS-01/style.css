@@ -1,15 +1,18 @@
   body {
       background-color: grey;
+      background-image: url("back01.jpg");
+      background-repeat: no-repeat;
       font-family: system-ui;
 
       h1 {
           color: green;
       }
- .p {
-            color:pink;
-          
-            font-family: lucida console;
-        }
+
+      .p {
+          color: pink;
+
+          font-family: lucida console;
+      }
 
   }
 
@@ -25,4 +28,15 @@
       padding: 8px;
       border: 1px solid #ffeeba;
       border-radius: 4px;
+  
+
+      
   }
+
+  .caixa3 {
+    color:yellow;
+    background-color: black;
+border-width: 3px;
+border-style: dashed;
+border-color: #333;
+}

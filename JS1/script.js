@@ -67,12 +67,12 @@ function mostrarFilmes(lista) {
 
         catalogo.innerHTML += `
             <div class="filme">
-                <h3>${filme.titulo}</h3>
+                <h3 style="color: rgb(48, 196, 216);">${filme.titulo}</h3>
                 <img class="poster" src="${filme.poster}" alt="${filme.titulo}">
                 <p style="color: rgb(48, 196, 216);">Ano: ${filme.ano}</p>
                 <p style="color: rgb(48, 196, 216);">Gênero: ${filme.genero}</p>
                 <p style="color: rgb(48, 196, 216);">Nota: ${filme.nota}</p>
-                ${filme.nota >= 8 ? "<p style=\"color: rgb(48, 196, 216);\">⭐ Recomendado</p>" : ""}
+                ${filme.nota >= 8 ? "<p style=\"color: rgb(48, 196, 216);\"> Recomendado</p>" : ""}
             </div>
         `;
     }

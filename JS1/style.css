@@ -1,0 +1,98 @@
+header {
+    background-color: rgb(1, 10, 17);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(48, 196, 216);
+    text-shadow: 2px 2px 4px rgba(226, 67, 39, 0.5);
+}
+
+.filme h3 a {
+    color: rgb(48, 196, 216);
+    text-decoration: none;
+}
+
+.filme h3 a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-style: italic;
+    color: white;
+}
+
+.destaque {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(48, 196, 216);
+}
+
+.poster {
+    width: 180px;
+    height: 270px;
+}
+
+body {
+    background-color: black;
+
+}
+
+.filme {
+    border: 1px solid grey;
+    background-color: rgb(25, 25, 25);
+    border-radius: 5px;
+    padding: 8px;
+    margin: 3px;
+
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+table {
+    color: rgb(48, 196, 216);
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    background-color: rgb(1, 10, 17);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(35, 35, 35);
+}
+
+.social:hover {
+    color: rgb(14, 235, 25);
+    text-decoration: none;
+    padding: 8px;
+}
+
+.imagem-sobre {
+    float: right;
+    width: 150px;
+    margin: 20px;
+}
+
+.social:focus {
+    color: darkred;
+    outline: 2px solid darkred;
+}
+
+.generos {
+    list-style-type: square;
+}
+.teste-visibilidade {
+    visibility: visible;
+}

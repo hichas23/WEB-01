@@ -143,7 +143,7 @@ function mostrarFavoritos() {
     listaFavoritos.innerHTML = "";
 
     for (let i = 0; i < favoritos.length; i++) {
-       listaFavoritos.innerHTML += `
+        listaFavoritos.innerHTML += `
     <li style="color: rgb(48, 196, 216);">
         ${favoritos[i]}
     </li>`;
@@ -158,13 +158,13 @@ botaoLimpar.addEventListener("click", function () {
     mostrarFavoritos();
 });
 
-let destaque = document.getElementById("destaque");
+let destaque = document.getElementById("titulo-destaque");
 
 destaque.addEventListener("mouseenter", function () {
-    destaque.style.color = "rgb(48, 196, 216)";
+    destaque.style.color = "black";
 });
 
 destaque.addEventListener("mouseout", function () {
-    destaque.style.color = "black";
+    destaque.style.color = "white";
 });
 

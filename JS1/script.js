@@ -85,3 +85,17 @@ function mostrarFilmes(lista) {
 }
 
 mostrarFilmes(filmes);
+let campoBusca = document.getElementById("busca");
+
+campoBusca.addEventListener("input", function() {
+    let texto = campoBusca.value.toLowerCase();
+    let filmesFiltrados = [];
+
+    for (let i = 0; i < filmes.length; i++) {
+        if (filmes[i].titulo.toLowerCase().includes(texto)) {
+            filmesFiltrados.push(filmes[i]);
+        }
+    }
+
+    mostrarFilmes(filmesFiltrados);
+});

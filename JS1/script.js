@@ -56,6 +56,7 @@ let filmes = [
         poster: "imagens/poster7.jpg"
     }
 ];
+let favoritos = [];
 function mostrarFilmes(lista) {
     let catalogo = document.querySelector(".catalogo");
     let contador = document.getElementById("contador");
@@ -67,6 +68,7 @@ function mostrarFilmes(lista) {
 
         catalogo.innerHTML += `
             <div class="filme">
+            <button onclick="favoritar(${i})"> Favoritar</button>
                 <h3 style="color: rgb(48, 196, 216);">${filme.titulo}</h3>
                 <img class="poster" src="${filme.poster}" alt="${filme.titulo}">
                 <p style="color: rgb(48, 196, 216);">Ano: ${filme.ano}</p>
@@ -102,7 +104,7 @@ campoBusca.addEventListener("input", function () {
 
 let filtroGenero = document.getElementById("filtro-genero");
 
-filtroGenero.addEventListener("change", function() {
+filtroGenero.addEventListener("change", function () {
     let generoSelecionado = filtroGenero.value;
     let filmesFiltrados = [];
 
@@ -117,4 +119,10 @@ filtroGenero.addEventListener("change", function() {
     }
 
     mostrarFilmes(filmesFiltrados);
+});
+let botaoInverter = document.getElementById("btn-inverter");
+
+botaoInverter.addEventListener("click", function () {
+    filmes.reverse();
+    mostrarFilmes(filmes);
 });

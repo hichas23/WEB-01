@@ -23,7 +23,7 @@ let filmes = [
     {
         titulo: "Guardiões da Galáxia Volume 2",
         ano: 2017,
-        genero: "Ação, Aventura",
+        genero: "Ação, Aventura,Drama",
         nota: 8,
         poster: "imagens/poster3.jpg"
     },
@@ -51,7 +51,7 @@ let filmes = [
     {
         titulo: "Deadpool e Wolverine",
         ano: 2024,
-        genero: "Ação, Aventura",
+        genero: "Ação, Aventura,Comédia",
         nota: 9,
         poster: "imagens/poster7.jpg"
     }
@@ -87,13 +87,32 @@ function mostrarFilmes(lista) {
 mostrarFilmes(filmes);
 let campoBusca = document.getElementById("busca");
 
-campoBusca.addEventListener("input", function() {
+campoBusca.addEventListener("input", function () {
     let texto = campoBusca.value.toLowerCase();
     let filmesFiltrados = [];
 
     for (let i = 0; i < filmes.length; i++) {
         if (filmes[i].titulo.toLowerCase().includes(texto)) {
             filmesFiltrados.push(filmes[i]);
+        }
+    }
+
+    mostrarFilmes(filmesFiltrados);
+});
+
+let filtroGenero = document.getElementById("filtro-genero");
+
+filtroGenero.addEventListener("change", function() {
+    let generoSelecionado = filtroGenero.value;
+    let filmesFiltrados = [];
+
+    if (generoSelecionado === "Todos") {
+        filmesFiltrados = filmes;
+    } else {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero.includes(generoSelecionado)) {
+                filmesFiltrados.push(filmes[i]);
+            }
         }
     }
 

@@ -68,7 +68,7 @@ function mostrarFilmes(lista) {
 
         catalogo.innerHTML += `
             <div class="filme">
-            <button onclick="favoritar(${i})"> Favoritar</button>
+           <button onclick="favoritar('${filme.titulo.replace(/'/g, "\\'")}')">♥ Favoritar</button>
                 <h3 style="color: rgb(48, 196, 216);">${filme.titulo}</h3>
                 <img class="poster" src="${filme.poster}" alt="${filme.titulo}">
                 <p style="color: rgb(48, 196, 216);">Ano: ${filme.ano}</p>
@@ -126,3 +126,45 @@ botaoInverter.addEventListener("click", function () {
     filmes.reverse();
     mostrarFilmes(filmes);
 });
+
+
+function favoritar(titulo) {
+    if (!favoritos.includes(titulo)) {
+        favoritos.push(titulo);
+    }
+
+    mostrarFavoritos();
+}
+
+function mostrarFavoritos() {
+    let listaFavoritos = document.getElementById("lista-favoritos");
+    let contadorFavoritos = document.getElementById("contador-favoritos");
+
+    listaFavoritos.innerHTML = "";
+
+    for (let i = 0; i < favoritos.length; i++) {
+       listaFavoritos.innerHTML += `
+    <li style="color: rgb(48, 196, 216);">
+        ${favoritos[i]}
+    </li>`;
+    }
+
+    contadorFavoritos.textContent = favoritos.length;
+}
+let botaoLimpar = document.getElementById("btn-limpar-favoritos");
+
+botaoLimpar.addEventListener("click", function () {
+    favoritos = [];
+    mostrarFavoritos();
+});
+
+let destaque = document.getElementById("destaque");
+
+destaque.addEventListener("mouseenter", function () {
+    destaque.style.color = "rgb(48, 196, 216)";
+});
+
+destaque.addEventListener("mouseout", function () {
+    destaque.style.color = "black";
+});
+
